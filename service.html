@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Wash Booking</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+.container{
+    width:400px;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+h2{
+    text-align:center;
+    color:#064d61;
+}
+
+label{
+    font-weight:bold;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#064d61;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#043844;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Car Wash Booking Form</h2>
+
+<form onsubmit="return bookService()"> 
+
+<label>Customer Name</label>
+<input type="text" placeholder="Enter your name" required>
+
+<label>Mobile Number</label>
+<input type="tel" placeholder="Enter mobile number" required>
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email" required>
+
+<label>Vehicle Model</label>
+<input type="text" placeholder="Example: Hyundai i20" required>
+
+<label>Select Service</label>
+<select required>
+    <option value="">-- Select Service --</option>
+    <option>Basic Wash</option>
+    <option>Premium Wash</option>
+    <option>Interior Cleaning</option>
+    <option>Full Detailing</option>
+    <option>Ceramic Coating</option>
+</select>
+
+<label>Preferred Date</label>
+<input type="date" required>
+
+<label>Preferred Time</label>
+<input type="time" required>
+
+<label>Service Address</label>
+<textarea rows="4" placeholder="Enter your address" required></textarea>
+
+<label>Payment Method</label>
+<select required>
+    <option value="">-- Select Payment --</option>
+    <option>Cash</option>
+    <option>UPI</option>
+    <option>Debit Card</option>
+    <option>Credit Card</option>
+</select>
+
+<a href="servicebooking.html">
+    <button>Book Now</button>
+</a>
+
+</form>
+
+</div>
+
+<script>
+function bookService(){
+
+    alert("✅ Car Wash Service Booked Successfully!");
+
+    window.location.href = "success.html";
+
+    return false;
+}
+</script>
+
+</body>
+</html>
