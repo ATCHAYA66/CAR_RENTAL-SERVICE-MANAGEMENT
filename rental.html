@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Rental</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:220px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+    overflow:hidden;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.card button{
+    margin-bottom:15px;
+    padding:10px 20px;
+    background:#064d61;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Choose Your Car</h1>
+
+<div class="container">
+
+    <div class="card">
+    <img src="maruti.jpg" width="220">
+    <h3>Maruti Swift</h3>
+
+    <button onclick="showDetails('swiftDetails')">View Details</button>
+
+    <div id="swiftDetails" style="display:none; margin-top:15px;">
+        <p><b>Fuel:</b> Petrol</p>
+        <p><b>Seats:</b> 5</p>
+        <p><b>Transmission:</b> Manual / Automatic</p>
+        <p><b>Mileage:</b> 22 km/l</p>
+        <p><b>Rent:</b> ₹1500 / Day</p>
+
+        <a href="booking.html">
+    <button>Book Now</button>
+</a>
+    </div>
+ </div>
+
+
+
+  <!--car2-->
+   <div class="card">
+    <img src="Baleno.jpg" width="220">
+    <h3>Baleno</h3>
+
+    <button onclick="showDetails('balenoDetails')">View Details</button>
+
+    <div id="balenoDetails" style="display:none; margin-top:15px;">
+        <p><b>Fuel:</b> Petrol</p>
+        <p><b>Seats:</b> 5</p>
+        <p><b>Transmission:</b> Manual / Automatic</p>
+        <p><b>Mileage:</b> 20 km/l</p>
+        <p><b>Rent:</b> ₹2000 / Day</p>
+
+       <a href="booking.html">
+    <button>Book Now</button>
+</a>
+    </div>
+  </div>
+  
+  <!--car3-->
+
+    <div class="card">
+    <img src="car3 Hyundai i20.jpg" width="220">
+    <h3>Hyundai i20</h3>
+
+    <button onclick="showDetails('HyundaiDetails')">View Details</button>
+
+    <div id="HyundaiDetails" style="display:none; margin-top:15px;">
+        <p><b>Fuel:</b> Petrol</p>
+        <p><b>Seats:</b> 5</p>
+        <p><b>Transmission:</b> Manual / Automatic</p>
+        <p><b>Mileage:</b> 19 km/l</p>
+        <p><b>Rent:</b> ₹1800 / Day</p>
+
+        <a href="booking.html">
+    <button>Book Now</button>
+</a>
+    </div>
+  </div>
+
+    
+    <div class="card">
+    <img src="innova.png" width="220">
+    <h3>Innova</h3>
+
+    <button onclick="showDetails('InnovaDetails')">View Details</button>
+
+    <div id="InnovaDetails" style="display:none; margin-top:15px;">
+        <p><b>Fuel:</b> Diesel</p>
+        <p><b>Seats:</b> 7-8</p>
+        <p><b>Transmission:</b> Manual</p>
+        <p><b>Mileage:</b> 23 km/l</p>
+        <p><b>Rent:</b> ₹2500 / Day</p>
+
+        <a href="booking.html">
+    <button>Book Now</button>
+</a>
+    </div>
+  </div>
+
+</div>
+<script>
+function showDetails(id) {
+    let details = document.getElementById(id);
+
+    if (details.style.display === "none") {
+        details.style.display = "block";
+    } else {
+        details.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
